@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+    <meta charset="UTF-8">
+    <title>relative</title>
+    <style>
+        body > div {
+            width: 600px;
+            height: 300px;
+            border: 3px solid black;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+        .box:nth-child(1) {
+            background-color: red;
+            left: 10px; top:10px;
+        }
+        .box:nth-child(2) {
+            background-color: yellow;
+            left:50px; top:50px;
+        }
+        .box:nth-child(3) {
+            background-color: green;
+            left:90px; top: 90px;
+        }
+    </style>
+</head>
+<body>
+    <h1>relative Postion</h1>
+    <div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

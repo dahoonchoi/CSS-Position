@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Fixed</title>
+    <style>
+        body > div {
+            width: 600px;
+            height: 300px;
+            border: 3px solid black;
+            
+            /*absolut 의 부모요소를 relative 형식으로 해서 
+            자식요소의 시작 좌표 기준을 상대 좌표로 한다.*/
+            position: relative;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            position: fixed;
+        }
+        .box:nth-child(1) {
+            background-color: red;
+            left: 10px; top:10px;
+
+            /*도형의 순서를 나타낸다*/
+            /*숫자가 클수록 앞으로 간다.*/
+            z-index: 100;
+        }
+        .box:nth-child(2) {
+            background-color: yellow;
+            left:50px; top:50px;
+        }
+        .box:nth-child(3) {
+            background-color: green;
+            left:90px; top: 90px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fixed Postion</h1>
+    <div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
